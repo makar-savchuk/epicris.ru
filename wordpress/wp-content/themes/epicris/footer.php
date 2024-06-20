@@ -1,0 +1,3 @@
+<footer class="footer">
+<div class="footer__section"><div class="footer__section--block"><div class="footer__section--main"><div class="footer__section--link"><?php echo date_i18n('Y');?>, <a href="/" class="footer__section-link">Epicris</a><a href="/about" class="footer__section-link" target="_blank">Реклама и контакты</a><a href="/privacy-policy" class="footer__section-link" target="_blank">Политика конфиденциальности</a><a href="/categories" class="footer__section-link" target="_blank">Все категории</a></div></div></div></div>
+</footer>

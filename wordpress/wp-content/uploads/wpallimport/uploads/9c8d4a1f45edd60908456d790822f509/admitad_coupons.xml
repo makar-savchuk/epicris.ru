@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<admitad_coupons>
+	<advcampaign_categories>
+		<category id="62">Интернет-магазины</category>
+		<category id="65" parentId="62">Цифровая и бытовая техника</category>
+		<category id="184">Back to School 2020</category>
+	</advcampaign_categories>
+	<advcampaigns>
+		<advcampaign id="22000">
+			<name>Honor</name>
+			<site>https://honor.ru/</site>
+			<categories>
+				<category_id>62</category_id>
+				<category_id>65</category_id>
+				<category_id>184</category_id>
+			</categories>
+		</advcampaign>
+	</advcampaigns>
+	<types>
+		<type id="2">Скидка на заказ</type>
+		<type id="3">Подарок к заказу</type>
+	</types>
+	<categories>
+		<category id="8">Компьютеры и электроника</category>
+	</categories>
+	<species>
+		<specie id="1">promocode</specie>
+		<specie id="2">action</specie>
+	</species>
+	<coupons>
+		<coupon id="337604">
+			<name>Промокод на скидку 1000 р на предзаказ HONOR Watch GS Pro и Watch ES</name>
+			<advcampaign_id>22000</advcampaign_id>
+			<rating>0.00</rating>
+			<logo>https://cdn.admitad.com/campaign/images/2019/7/17/22000-a4f0d80672204bb5.jpg</logo>
+			<specie_id>1</specie_id>
+			<promocode>AHONORLIFE</promocode>
+			<promolink>http://ad.admitad.com/coupon/krnhqxzeve16b5da232a0200f864ab/</promolink>
+			<gotolink>https://ad.admitad.com/g/jf6365glj316b5da232a0200f864ab/?i=3</gotolink>
+			<date_start>2020-10-05 00:00:00</date_start>
+			<date_end>2020-10-15 23:59:00</date_end>
+			<exclusive>false</exclusive>
+			<discount>1 000 р.</discount>
+			<types>
+				<type_id>2</type_id>
+			</types>
+			<categories>
+				<category_id>8</category_id>
+			</categories>
+			<special_category></special_category>
+		</coupon>
+		<coupon id="330301">
+			<name>HONOR life интеллектуальные продукты для жизни</name>
+			<advcampaign_id>22000</advcampaign_id>
+			<rating>7.67</rating>
+			<logo>https://cdn.admitad.com/campaign/images/2019/7/17/22000-a4f0d80672204bb5.jpg</logo>
+			<specie_id>2</specie_id>
+			<promocode>Не нужен</promocode>
+			<promolink>http://ad.admitad.com/coupon/8mhaew8tz416b5da232a0200f864ab/</promolink>
+			<gotolink>https://ad.admitad.com/g/n7giztkbln16b5da232a0200f864ab/?i=3</gotolink>
+			<date_start>2020-08-26 13:26:40</date_start>
+			<date_end>None</date_end>
+			<exclusive>false</exclusive>
+			<discount></discount>
+			<types>
+				<type_id>3</type_id>
+			</types>
+			<categories>
+				<category_id>8</category_id>
+			</categories>
+			<special_category></special_category>
+		</coupon>
+	</coupons>
+</admitad_coupons>

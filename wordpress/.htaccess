@@ -1,0 +1,520 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+# BEGIN Imagify: rewrite rules for webp
+<IfModule mod_setenvif.c>
+	# Vary: Accept for all the requests to jpeg, png, and gif.
+	SetEnvIf Request_URI "\.(jpg|jpeg|jpe|png|gif)$" REQUEST_image
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+	# Check if browser supports WebP images.
+	RewriteCond %{HTTP_ACCEPT} image/webp
+
+	# Check if WebP replacement image exists.
+	RewriteCond %{DOCUMENT_ROOT}/$1.$2.webp -f
+
+	# Serve WebP image instead.
+	RewriteRule (.+)\.(jpg|jpeg|jpe|png|gif)$ $1.$2.webp [T=image/webp]
+</IfModule>
+
+<IfModule mod_headers.c>
+	Header append Vary Accept env=REQUEST_image
+</IfModule>
+# END Imagify: rewrite rules for webp
+
+# BEGIN Imagify: webp file type
+<IfModule mod_mime.c>
+	AddType image/webp .webp
+</IfModule>
+# END Imagify: webp file type
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+Redirect 301 /cdek-delivery https://aflink.ru/g/8m5m8022me16b5da232afa1399d1cb/
+
+Redirect 301 /toloka https://toloka.yandex.ru/promo?referralCode=7OY22ZGE
+Redirect 301 /work-zilla https://work-zilla.com/?ref=3712647
+Redirect 301 /advego https://advego.com/2EvZeYjTAQ
+Redirect 301 /vktarget https://vktarget.ru/users/?ref=2907002
+Redirect 301 /profi https://aflink.ru/g/zqyi8ot6o216b5da232a7e4bf1243c/
+Redirect 301 /profi-fl https://ad.admitad.com/g/zqyi8ot6o216b5da232a7e4bf1243c/?i=10&ulp=https%3A%2F%2Fprofi.ru%2Fservices%2Fit_freelance%2F
+Redirect 301 /kwork https://ad.admitad.com/g/hfrq9tjrsp16b5da232ad7a732141a/?i=10&ulp=https%3A%2F%2Fkwork.ru%2Ffor-sellers
+Redirect 301 /kwork-fl https://ad.admitad.com/g/hfrq9tjrsp16b5da232ad7a732141a/
+Redirect 301 /admitad https://www.admitad.com/ru/promo/?ref=5c209c135e
+Redirect 301 /rucaptcha https://rucaptcha.com?from=15213312
+Redirect 301 /qcomment https://qcomment.ru/reft/3334097
+Redirect 301 /etxt https://www.etxt.ru/?r=smallbull
+
+Redirect 301 /lamoda https://modato.ru/g/3f2779c2d416b5da232a4e8640d77b/?erid=LatgBjSy4
+Redirect 301 /benetton https://aflink.ru/g/lmccry72lj16b5da232a6e6e81a6d1/
+Redirect 301 /loverepublic https://aflink.ru/g/k4q72gplze16b5da232a4b49bf85d3/?erid=LatgBuCYJ
+Redirect 301 /guess https://ad.admitad.com/g/18rxy49d6016b5da232a14a8193c0e/
+Redirect 301 /insantrik https://aflink.ru/g/zzyq7esid216b5da232a15a67a50c6/?erid=LatgBg18V
+Redirect 301 /groupprice https://aflink.ru/g/d1685da4f516b5da232af2d40bf9c7/?erid=LatgC5sqo
+Redirect 301 /zolla https://aflink.ru/g/7y2797i2o316b5da232a1206e54ac7/?erid=LatgBk5a7
+Redirect 301 /ms https://ad.admitad.com/g/i3nqoast9c16b5da232a738fc0ec93/
+Redirect 301 /tvoe https://go.redav.online/a038cd27112259f0
+Redirect 301 /shoppinglive http://ad.admitad.com/g/2waclvjb4w16b5da232a123c03aabf/
+Redirect 301 /lacoste https://ad.admitad.com/g/f446ccbb4516b5da232ad5f2d2f9d4/
+Redirect 301 /zarina https://ad.admitad.com/g/1cae95280a16b5da232a4547c7e77d/
+Redirect 301 /rendez-vous-odezhda https://aflink.ru/g/4uxsibat7316b5da232aa4f893cf71/?erid=LatgBSHjT&ulp=https%3A%2F%2Fwww.rendez-vous.ru%2Fcatalog%2Fodezhda%2F
+
+
+Redirect 301 /levelkitchen https://ad.admitad.com/g/u7cz7332nc16b5da232a738d825a2a/
+Redirect 301 /growfood https://ad.admitad.com/g/36wusytszy16b5da232aaeb982cd0a/
+Redirect 301 /letbefit https://aflink.ru/g/qm29jzxwek16b5da232afcd3300043/?erid=LatgBnA7a
+Redirect 301 /justfood https://aflink.ru/g/cfygm3ult416b5da232a2c0087287e/?erid=LatgBZfwp
+Redirect 301 /yamdiet https://aflink.ru/g/zrlljdu3on16b5da232acb11a836d0/?erid=LatgBdRbN
+Redirect 301 /general-food https://ad.admitad.com/g/k15msx7fve16b5da232aea7e0adbb8/
+Redirect 301 /chefmarket https://www.chefmarket.ru/
+Redirect 301 /vnukivnuchka https://lnk.do/w47tuS
+Redirect 301 /vkusmil https://ad.admitad.com/g/ih9rx2nqqt16b5da232a7b4c5b3b6a
+Redirect 301 /progymfood https://lnk.do/JRQPyp
+
+Redirect 301 /tastycoffee https://aflink.ru/g/p7ivmje1cj16b5da232a9ebcee8c5e/?erid=LatgBkMrh
+Redirect 301 /sbermegamarket-kofe https://ad.admitad.com/g/hyddu57k0316b5da232afbfd3e99ca/?ulp=https%3A%2F%2Fsbermegamarket.ru%2Fcatalog%2Fkofe%2F
+Redirect 301 /101tea https://aflink.ru/g/g5hhc02lmt16b5da232ad55ad7d85a/?erid=LatgBuoUE
+
+Redirect 301 /perekrestok https://ad.admitad.com/g/paesexo5wj16b5da232aaa88a5b1cc/
+Redirect 301 /auchan https://ad.admitad.com/g/m9xmuu0po516b5da232ac1535657bd/
+Redirect 301 /okeydostavka https://okmarket.ru/
+Redirect 301 /utkonos https://aflink.ru/g/mzftr7qzof16b5da232afc8a01de21/
+Redirect 301 /av https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fretail%2Fazbuka_vkusa
+Redirect 301 /vkusvill https://aflink.ru/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fretail%2Fvkusvill
+Redirect 301 /dostavista https://go.avnxt.site/59c44a182911d6d0
+Redirect 301 /sbermarket https://aflink.ru/g/ugldybr34d16b5da232a326cfdd537/?erid=LatgBYJCD
+Redirect 301 /metro https://aflink.ru/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fretail%2Fmetro_igooods
+Redirect 301 /globus https://aflink.ru/g/gryoqpsjzo16b5da232a4ac2eebc76/
+
+Redirect 301 /niyama-msk https://aflink.ru/g/3s3em6e8xf16b5da232a6a4a7498a3/?erid=LatgBYarp&subid=moscow
+Redirect 301 /cushivyosla-msk https://aflink.ru/g/3s3em6e8xf16b5da232a6a4a7498a3/?erid=LatgBYarp&subid=moscow
+Redirect 301 /yandex-eda https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fmoscow%3Fquickfilter%3Dsushi%26shippingType%3Ddelivery
+Redirect 301 /tanuki https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Ftanuki_tejgb
+Redirect 301 /yakitoriya https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fyakitoriya_zimwl
+Redirect 301 /sushiwok-sushi https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fsushi_wok
+Redirect 301 /foodband-msk https://ad.admitad.com/g/6i8z56w6fx16b5da232a2e77510c9d/?subid=moscow
+Redirect 301 /2-berega-roll-msk https://ad.admitad.com/g/3bead0012116b5da232ac831f8e1d7/?ulp=https%3A%2F%2F2-berega.ru%2Fallroll
+
+Redirect 301 /papajohns https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fpapa_dzhons_neucv
+Redirect 301 /yandex-eda-pizza-msk https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fmoscow%3Fquickfilter%3Dpizza%26shippingType%3Ddelivery
+Redirect 301 /dominospizza https://aflink.ru/g/ig27jyhjqs16b5da232a35e8fc368c/
+Redirect 301 /foodband-pizza https://ad.admitad.com/g/6i8z56w6fx16b5da232a2e77510c9d/?ulp=https%3A%2F%2Ffoodband.ru%2Fpizza%2F
+Redirect 301 /pizzahut https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fpizza_hut_fnaez
+Redirect 301 /2-berega-pizza-msk https://ad.admitad.com/g/3bead0012116b5da232ac831f8e1d7/?i=10&ulp=https%3A%2F%2F2-berega.ru%2Fpizza
+Redirect 301 /2-berega https://ad.admitad.com/g/3bead0012116b5da232ac831f8e1d7/
+Redirect 301 /ipizza https://lnk.do/k9TYQA
+Redirect 301 /foodband https://ad.admitad.com/g/6i8z56w6fx16b5da232a2e77510c9d/
+Redirect 301 /m-food https://aflink.ru/g/7jmalrcp7g16b5da232a042e35a20f/
+
+Redirect 301 /piroginomerodin https://aflink.ru/g/khbkru8zft16b5da232abaa9cb51a6/?erid=LatgBsp6x
+Redirect 301 /qpirog https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fpirozhkova__1
+Redirect 301 /ruspie https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fruspaj_pirogi
+Redirect 301 /rupirog https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fthe_lrnut
+Redirect 301 /ospirogi https://ad.admitad.com/g/m6ste24j7q16b5da232aa368968085/?ulp=https%3A%2F%2Feda.yandex.ru%2Fr%2Fosetinskie_pirogi_syr__myaso
+
+Redirect 301 /teamo https://aflink.ru/g/be808f067d16b5da232a39a9c191fc/?erid=LatgBdhst
+Redirect 301 /linkyou https://aflink.ru/g/p06og8qbil16b5da232aa845b70db0/?erid=LatgBjojy
+
+Redirect 301 /sbermegamarket-smartfony https://ad.admitad.com/g/hyddu57k0316b5da232afbfd3e99ca/?ulp=https%3A%2F%2Fsbermegamarket.ru%2Fcatalog%2Fsmartfony%2F
+Redirect 301 /megafon-mobile https://ad.admitad.com/g/207bcbdf4c16b5da232a159ac4a8d3/?ulp=https%3A%2F%2Fshop.megafon.ru%2Fmobile.html
+Redirect 301 /beeline-smartfony https://ad.admitad.com/g/6a2501b76116b5da232a0d7aa9ee62/?i=10&ulp=https%3A%2F%2Fmoskva.beeline.ru%2Fshop%2Fcatalog%2Ftelefony%2Fsmartfony%2F
+Redirect 301 /aliexpress https://alitems.co/g/vv3q4oey1v16b5da232ab6d1781017/
+
+Redirect 301 /avtoall https://aflink.ru/g/5rermd1rb516b5da232aaeed5c54e0/?erid=LatgBk8mS
+Redirect 301 /dvizhcom https://aflink.ru/g/cnw3cvors116b5da232ad722cdca74/?erid=LatgBg2xJ
+Redirect 301 /kolesa-darom https://aflink.ru/g/phemb8m2uc16b5da232accd85565ce/?erid=LatgCAysS
+Redirect 301 /akbmag https://aflink.ru/g/sb81v3z8gs16b5da232a81327ae59b/?erid=LatgC9aX4
+Redirect 301 /megazip https://aflink.ru/g/jud41iue3n16b5da232a889a000efe/?erid=LatgBZKQ6
+
+Redirect 301 /stoloto https://aflink.ru/g/hwow701jph16b5da232a0e4677dd22/
+Redirect 301 /ruslotto https://ad.admitad.com/g/hwow701jph16b5da232a0e4677dd22/?i=10&ulp=https%3A%2F%2Fwww.stoloto.ru%2Fruslotto%2Fgame%3Flastdraw
+Redirect 301 /gosloto https://ad.admitad.com/g/hwow701jph16b5da232a0e4677dd22/?i=10&ulp=https%3A%2F%2Fwww.stoloto.ru%2F6x45%2Fgame%3Flastdraw
+Redirect 301 /gzhl https://ad.admitad.com/g/hwow701jph16b5da232a0e4677dd22/?i=10&ulp=https%3A%2F%2Fwww.stoloto.ru%2Fgzhl%2Fgame%3Flastdraw
+Redirect 301 /zodiac https://ad.admitad.com/g/hwow701jph16b5da232a0e4677dd22/?i=10&ulp=https%3A%2F%2Fwww.stoloto.ru%2Fzodiac%2Fgame%3Flastdraw
+Redirect 301 /zp https://ad.admitad.com/g/hwow701jph16b5da232a0e4677dd22/?i=10&ulp=https%3A%2F%2Fwww.stoloto.ru%2Fzp%2Fgame%3Flastdraw
+
+Redirect 301 /sbermegamarket-elektronika https://ad.admitad.com/g/hyddu57k0316b5da232afbfd3e99ca/?ulp=https%3A%2F%2Fsbermegamarket.ru%2Fcatalog%2Felektronika%2F
+Redirect 301 /oldi https://aflink.ru/g/959f88478216b5da232ac740c00ae7/?erid=LatgBsAS8
+Redirect 301 /kcentr https://aflink.ru/g/dkpa81aewj16b5da232a1f7e759491/?erid=LatgBs4Gd
+Redirect 301 /biggeek https://aflink.ru/g/hqx7b9l5cg16b5da232a5f881f9d45/
+Redirect 301 /sbermegamarket-bytovaya-tehnika https://ad.admitad.com/g/hyddu57k0316b5da232afbfd3e99ca/?ulp=https%3A%2F%2Fsbermegamarket.ru%2Fcatalog%2Fbytovaya-tehnika%2F
+Redirect 301 /techport https://ad.admitad.com/g/mr96ej6opa16b5da232ad66b5a1590/
+Redirect 301 /holodilnik https://ad.admitad.com/g/330c142f2e16b5da232ad37733f903/
+
+Redirect 301 /alibaba https://ad.admitad.com/g/pm1aev55cl16b5da232a219aa26f6f/
+Redirect 301 /banggood https://ad.admitad.com/g/e8f129b05e16b5da232a6213826a88/
+Redirect 301 /buyincoin https://ad.admitad.com/g/qxqywp9nit16b5da232a84077c549c/
+Redirect 301 /tomtop https://ad.admitad.com/g/xljorca89616b5da232a4bf89f6ddb/
+Redirect 301 /lightinthebox https://ad.admitad.com/g/383ee6455716b5da232a7d95a12660/
+Redirect 301 /tinydeal https://ad.admitad.com/g/xljorca89616b5da232a4bf89f6ddb/
+
+Redirect 301 /travel-yandex-avia https://ad.admitad.com/g/6fwnm4uptp16b5da232a6b3b8b6079/?ulp=https%3A%2F%2Ftravel.yandex.ru%2Favia%2F
+Redirect 301 /kupibilet https://ad.admitad.com/g/cf5fd6789016b5da232ac67f485a43/
+Redirect 301 /citytravel https://ad.admitad.com/g/c3c08bdc8f16b5da232a09315e6c64/
+
+
+Redirect 301 /cse https://ad.admitad.com/g/neommahjz816b5da232a9c7aa9e1df/
+Redirect 301 /cse-courier https://ad.admitad.com/g/neommahjz816b5da232a9c7aa9e1df03fc755d57/
+Redirect 301 /boxberry https://ad.admitad.com/g/g3nv2gpvj616b5da232a8b6f9aead1/
+
+Redirect 301 /rt https://aflink.ru/g/ma179x299616b5da232a66a94b5244/
+Redirect 301 /rt-spb https://ad.admitad.com/g/ma179x299616b5da232a66a94b5244023859e68c/?subid=spb
+Redirect 301 /rt-msk https://ad.admitad.com/g/ma179x299616b5da232a66a94b5244023859e68c/?subid=moscow
+Redirect 301 /yota https://ad.admitad.com/g/ix7eisyc2u16b5da232a8d5b295c68/
+
+Redirect 301 /pm https://aflink.ru/g/d84b7c16c816b5da232a6567c813c0/?erid=LatgBqUx7
+Redirect 301 /mebelaero https://aflink.ru/g/fj77fd2gew16b5da232a9bc0ba5f2e/?erid=LatgBsBsz
+Redirect 301 /stolplit https://ad.admitad.com/g/1e5833d54b16b5da232a757eef425d/
+Redirect 301 /stolplit-divan https://ad.admitad.com/g/1e5833d54b16b5da232a757eef425d/?i=10&ulp=https%3A%2F%2Fwww.stolplit.ru%2Finternet-magazin%2Fkatalog-mebeli%2Fmyagkaya-mebel%2F
+Redirect 301 /bestmebelshop https://ad.admitad.com/g/utmp2mw26216b5da232a7a55b58f14/
+Redirect 301 /yourroom https://yourroom.ru/
+Redirect 301 /hoff https://ad.admitad.com/g/6dadf43a4d16b5da232af76aa61bb5/
+Redirect 301 /hoff-divan https://ad.admitad.com/g/6dadf43a4d16b5da232af76aa61bb5/?ulp=https%3A%2F%2Fhoff.ru%2Fcatalog%2Fgostinaya%2Fdivany%2F
+Redirect 301 /mebel-top https://aflink.ru/g/6fnuscpz9f16b5da232af21372fd89/?erid=LatgBYLUf
+Redirect 301 /askona https://aflink.ru/g/av30r8vbjv16b5da232aa9fe403c97/
+
+Redirect 301 /dcrussia https://aflink.ru/g/b6c9f808c516b5da232aa4151509f8/?erid=LatgC4XcT
+Redirect 301 /ecco https://ad.admitad.com/g/avmsvi2rfc16b5da232a2cb26b7aaa/
+Redirect 301 /adidas https://modato.ru/g/3f2779c2d416b5da232a4e8640d77b/?ulp=https%3A%2F%2Fwww.lamoda.ru%2Fb%2F1061%2Fbrand-adidas%2F
+Redirect 301 /respect https://aflink.ru/g/wp3c2ny1a116b5da232a7e960c0896/?erid=LatgBxE6v
+Redirect 301 /timberland https://modato.ru/g/3f2779c2d416b5da232a4e8640d77b/?ulp=https%3A%2F%2Fwww.lamoda.ru%2Fb%2F5815%2Fbrand-timberland%2F
+
+Redirect 301 /tinkoffinsurance https://aflink.ru/g/ydgvieyib416b5da232ada51c9973fce48422737/?erid=LatgBfiJv
+Redirect 301 /soglasie https://aflink.ru/g/i8h0z93nu616b5da232adafaee847b5e5d9adb35/?erid=LatgBpoE5
+Redirect 301 /ingos https://aflink.ru/g/gd9migpteq16b5da232a68c8c3a6541d2ae1d0ca/?erid=LatgBfjJM
+Redirect 301 /reso https://aflink.ru/g/6jmich24fr16b5da232a42fd550891070b939e85/?erid=LatgBvnUH
+Redirect 301 /renins https://aflink.ru/g/s6tbqbduoz16b5da232a43a0a7def3/
+Redirect 301 /cherehapa https://aflink.ru/g/2ey5h355qu16b5da232a1e9ee21cc3/?erid=LatgBpnvS
+
+Redirect 301 /yves-rocher https://ad.admitad.com/g/6de2a29e2b16b5da232ac188ef9305/
+Redirect 301 /pompadoo https://ad.admitad.com/g/ij1xsd2nzkbe2672feb48cf9ea9dfa/
+Redirect 301 /letu https://aflink.ru/g/df7817085916b5da232a29547bf01b/
+Redirect 301 /podruzhka https://ad.admitad.com/g/1k6ifs9ucy16b5da232ab99858a82e/
+Redirect 301 /beloris-beauty-market https://aflink.ru/g/497a8pgn4f16b5da232addfa09385b/?erid=LatgBViah
+Redirect 301 /pharmacosmetica https://ad.admitad.com/g/ny8r7x7kal16b5da232a45f5c1a381/
+Redirect 301 /proficosmetics https://aflink.ru/g/37o8e8gz3t16b5da232a02157dcfc6/?erid=LatgC7bzM
+
+Redirect 301 /ivi https://aflink.ru/g/joy9jrapz416b5da232a93e749a11b/?erid=LatgBqp8R
+
+Redirect 301 /yandex-trains https://ad.admitad.com/g/6fwnm4uptp16b5da232a6b3b8b6079/?ulp=https%3A%2F%2Ftravel.yandex.ru%2Ftrains%2F
+Redirect 301 /poezd https://aflink.ru/g/zxfj3mir7716b5da232aac7520b3ad/?erid=LatgBfRGF
+Redirect 301 /infobus https://ad.admitad.com/g/pyj4y4uj9q16b5da232a9b8c64f65e/
+
+Redirect 301 /zaochnik https://aflink.ru/g/sk55otxguo16b5da232a6853a97b34/?erid=LatgBb6k3
+Redirect 301 /napishem https://aflink.ru/g/jyvqpi890n16b5da232a10ecf760fc/?erid=LatgBqrLK
+
+Redirect 301 /akusherstvo https://ad.admitad.com/g/dd8aeb9ade16b5da232a748f778371/
+
+Redirect 301 /agrosemfond https://aflink.ru/g/b2g1xy0n0e16b5da232aff9a197a93/?erid=LatgBrkA7
+Redirect 301 /garshinka https://aflink.ru/g/8c5p0v1cq616b5da232a458cf12507/?erid=LatgBt6K5
+Redirect 301 /bekker https://aflink.ru/g/buaya58n6y16b5da232a9a5b70905c/
+Redirect 301 /ruscemena https://aflink.ru/g/hzx45tzwi316b5da232a2f12ba3cda/?erid=LatgBwpb5
+
+Redirect 301 /vodovoz https://aflink.ru/g/e2eb084ykg16b5da232acf21c29436/
+
+Redirect 301 /tele2 https://ad.admitad.com/g/uf3qormpjg16b5da232a9eb5d70cbd/
+Redirect 301 /tinkoff-mobile https://aflink.ru/g/u5nshlyq0516b5da232ab8d11ffb1c/?erid=LatgBTJBE
+Redirect 301 /megafon-connect https://ad.admitad.com/g/207bcbdf4c16b5da232a159ac4a8d3/?ulp=https%3A%2F%2Fshop.megafon.ru%2Fconnect%2Fchtarif.html
+
+Redirect 301 /chitai-gorod https://aflink.ru/g/q6gfnfvsq016b5da232aa804937a48/
+Redirect 301 /book24 https://aflink.ru/g/szq4wwgsqh16b5da232a0334bf6817/
+Redirect 301 /labirint https://aflink.ru/g/07d6913cf616b5da232a5ddd29e1bc/
+
+Redirect 301 /domsporta https://aflink.ru/g/471977ed9116b5da232a894f035573/?erid=LatgBpnmd
+Redirect 301 /sportmaster https://aflink.ru/g/ih21ujqkwf16b5da232ab09e931874/?erid=LatgBk8A8
+Redirect 301 /gipersport https://ad.admitad.com/g/m95ptpc2d516b5da232a2170dc133d/
+Redirect 301 /planeta-sport https://aflink.ru/g/1387bd5a2016b5da232a4dead8de0a/?erid=LatgBZeW3
+
+Redirect 301 /buyusa https://ad.admitad.com/g/2k1lbd8df216b5da232a35e5af7680/
+Redirect 301 /cdek https://ad.admitad.com/g/8m5m8022me16b5da232afa1399d1cbec5884abb0/
+
+Redirect 301 /megafon-iphone https://ad.admitad.com/g/207bcbdf4c16b5da232a159ac4a8d3/?ulp=https%3A%2F%2Fshop.megafon.ru%2Fmobile%2Fapple.html
+Redirect 301 /mts-iphone https://ad.admitad.com/g/eca1415c7d16b5da232a1ebfd6fcfa/?i=10&ulp=https%3A%2F%2Fshop.mts.ru%2Fapple%2Fiphone%2F
+Redirect 301 /re-store https://aflink.ru/g/eff06bcc6216b5da232a2c9175ee84/?erid=LatgBpVa2
+
+Redirect 301 /englex https://aflink.ru/g/aohz3bg2ar16b5da232a47fc997f9b/?erid=LatgBfM9y
+Redirect 301 /skyeng https://ad.admitad.com/g/tqcmqmjujo16b5da232a86cd98cf0a/
+Redirect 301 /tetrika https://aflink.ru/g/54h3zonoi616b5da232a94d0e5a27a/?erid=LatgBuDm2
+Redirect 301 /tetrika-school https://ad.admitad.com/g/54h3zonoi616b5da232a94d0e5a27a1cc8d338e5/
+Redirect 301 /tetrika-general https://ad.admitad.com/g/54h3zonoi616b5da232a94d0e5a27af4eb17b226/
+Redirect 301 /skysmart https://ad.admitad.com/g/5zbmoftyzd16b5da232ae9940b7619/
+Redirect 301 /profi-english https://ad.admitad.com/g/zqyi8ot6o216b5da232a7e4bf1243c/?ulp=https%3A%2F%2Fprofi.ru%2Frepetitor%2Fcourses%2Fenglish%2F
+Redirect 301 /lingualeo https://aflink.ru/g/e583077b6316b5da232ac814d4b7c0/?erid=LatgBqXcc
+Redirect 301 /puzzle-english https://aflink.ru/g/0abba212ff16b5da232a1ac5a4392d/?erid=LatgBWwox
+Redirect 301 /foxford https://aflink.ru/g/13307e5c0316b5da232af339406e2f/?erid=LatgBt6Pb
+Redirect 301 /uchmet https://aflink.ru/g/e88764ai6016b5da232af1563c8740/?erid=LatgBsUPn
+Redirect 301 /novakid https://ad.admitad.com/g/e9m2l0n1rx16b5da232a59b83a829b/
+Redirect 301 /englishpapa https://ad.admitad.com/g/4o5it44nbz16b5da232a90fc00f5f8/
+
+Redirect 301 /yandex-hotels https://ad.admitad.com/g/6fwnm4uptp16b5da232a6b3b8b6079/?ulp=https%3A%2F%2Ftravel.yandex.ru%2Fhotels%2F
+Redirect 301 /ostrovok https://aflink.ru/g/78b470f15e16b5da232a73c53f4f5f/?erid=LatgBahgi
+Redirect 301 /trip https://ad.admitad.com/g/yio6i5e56t16b5da232af37e25e0cc/
+Redirect 301 /citytravel-hotel https://ad.admitad.com/g/c3c08bdc8f16b5da232a09315e6c64/?ulp=https%3A%2F%2Fcity.travel%2Fhotel
+
+Redirect 301 /tinkoff-inv https://aflink.ru/g/tnzpmqf8qt16b5da232aff55d8af66/?erid=LatgBvsGJ
+
+Redirect 301 /allrad https://aflink.ru/g/elgf718etq16b5da232a0e020ad620/?erid=LatgBUcjU
+
+Redirect 301 /send-flowers https://sendflowers.ru/
+Redirect 301 /buket-spb https://aflink.ru/g/rqllu32o6h16b5da232a9d0b0aeedb/?erid=LatgC4t5h
+Redirect 301 /floraexpress https://aflink.ru/g/bg71l7yp6516b5da232ac1e2b709c0/?erid=LatgC6Dhm
+Redirect 301 /moscvettorg https://aflink.ru/g/k2puk5f0x416b5da232aeac27ebda8/?erid=LatgBTcDH
+Redirect 301 /flowwow https://flowwow.com/
+Redirect 301 /grand-flora https://ad.admitad.com/g/a04b4253d416b5da232adf55744f05/
+Redirect 301 /cyber-florist https://ad.admitad.com/g/y2zwzvitie16b5da232ad4ec31596f/
+
+Redirect 301 /vplaboratory https://ad.admitad.com/g/lfg05dcxus16b5da232aeb5428f04f/
+Redirect 301 /bombbar https://ad.admitad.com/g/9fz71r07yu16b5da232ac95e530afa/
+Redirect 301 /fitomarket https://ad.admitad.com/g/kwudlemd1h16b5da232a66084fa431/?ulp=https%3A%2F%2Ffitomarket.ru%2Fcatalog%2Fsportivnoe_pitanie%2F%3Fsort%3Dupdate
+
+Redirect 301 /petrovich https://ad.admitad.com/g/fjtv2ijs4316b5da232a3d96fce434/
+Redirect 301 /garagetools https://ad.admitad.com/g/om5zk45wur16b5da232a105ff51b0e/
+Redirect 301 /vseinstrumenti https://aflink.ru/g/bef1f6187a16b5da232aea9a5e8e92/?erid=LatgBxXun
+
+Redirect 301 /hobbygames https://ad.admitad.com/g/y0c4wzdd2516b5da232a43c612bc21/
+Redirect 301 /mosigra https://ad.admitad.com/g/qrknhhlxju16b5da232ab077caaadd/
+
+Redirect 301 /sokolov https://ad.admitad.com/g/ron6q0u7bq16b5da232a4cb8c70bad/
+Redirect 301 /liniilubvi https://liniilubvi.ru/
+Redirect 301 /yuvelirochka https://aflink.ru/g/pqmii7ygha16b5da232a16dc400581/?erid=LatgBiQU5
+Redirect 301 /bronnitsy https://aflink.ru/g/46c756bb5e16b5da232a5bd1695d3f/?erid=LatgBqSHb
+
+Redirect 301 /alltime https://aflink.ru/g/68d8d2af3b16b5da232a14ec56d999/?erid=LatgBv7HB&ulp=https%3A%2F%2Fwww.alltime.ru%2Fwatch%2F
+Redirect 301 /bestwatch https://aflink.ru/g/7d074b20eb16b5da232a77d7343c30/?erid=LatgBiNsP
+
+Redirect 301 /yandex-job https://aflink.ru/g/jlaapmi9hn16b5da232af4e9aafc48/
+
+Redirect 301 /navigator https://ad.admitad.com/g/8ezqdkv0do16b5da232a9893673c91/?i=10&ulp=https%3A%2F%2Fwww.navigator-shop.ru%2Fcatalog%2Fohota-rybalka-i-turizm%2F
+Redirect 301 /vodnik https://aflink.ru/g/sjhwrptg1v16b5da232a138b90ff2d/?erid=LatgBpmYv
+
+Redirect 301 /velosklad https://aflink.ru/g/s763oztejh16b5da232a535f9d39fd/?erid=LatgBj5tT
+Redirect 301 /forward https://aflink.ru/g/pwss8hmlx516b5da232af6f0e12233/?erid=LatgC4Zts
+Redirect 301 /vamvelosiped https://aflink.ru/g/0eayrbpvrk16b5da232a8148c2f462/?erid=LatgBTJ6s
+Redirect 301 /velodrive https://aflink.ru/g/vu5cjmwwwl16b5da232a5f3bd41df7/?erid=LatgBp8GF
+
+Redirect 301 /ivi https://aflink.ru/g/joy9jrapz416b5da232a93e749a11b/?erid=LatgBqp8R
+Redirect 301 /start https://aflink.ru/g/bqg13x78l316b5da232ad5244facbc/?erid=LatgBgo1z
+Redirect 301 /wink https://ad.admitad.com/g/dnezl2xu4116b5da232aaf54ab86e0/
+Redirect 301 /kion https://ad.admitad.com/g/voj3yf1i4o16b5da232a2009e7462e/
+
+Redirect 301 /intimshop https://ad.admitad.com/g/0249h24an816b5da232a601822f61e/
+Redirect 301 /eroshop https://aflink.ru/g/ekk3avdshx16b5da232ad948b1b30c/?erid=LatgBmkg6
+Redirect 301 /eroticavip https://aflink.ru/g/mvj4i4f1co16b5da232a53141b4794/?erid=LatgBqTRp
+Redirect 301 /deserved https://ad.admitad.com/g/n1wjcpoxju16b5da232a2aba01d436/
+Redirect 301 /bestsex https://ad.admitad.com/g/5fmd0xqb9c16b5da232a081835fa81/
+Redirect 301 /dopinglove https://ad.admitad.com/g/y05bvgi61l16b5da232a056d8d2a8f/
+
+Redirect 301 /soglasie-vzr https://aflink.ru/g/i8h0z93nu616b5da232adafaee847ba37a87810e/?erid=LatgBpoE5
+Redirect 301 /zettains-vzr https://aflink.ru/g/27wmm2ciw316b5da232a4d3555d70b1e7dc20ce1/?erid=LatgBTy98
+Redirect 301 /alfastrah-vzr https://www.alfastrah.ru/individuals/travel/vzr/
+Redirect 301 /tinkoffinsurance-vzr https://aflink.ru/g/ydgvieyib416b5da232ada51c9973fce6023d10e/?erid=LatgBfiJv
+Redirect 301 /ingos-vzr https://aflink.ru/g/gd9migpteq16b5da232a68c8c3a654048e48a969/?erid=LatgBfjJM
+Redirect 301 /liberty24 https://ad.admitad.com/g/oz45nx5ae216b5da232aa8ecf76dac/
+Redirect 301 /renins-vzr https://aflink.ru/g/o3kdl1rdc016b5da232aa59e4bef2b/
+
+Redirect 301 /soglasie-dom https://aflink.ru/g/i8h0z93nu616b5da232adafaee847b3ccbb9e42c/?erid=LatgBpoE5
+Redirect 301 /zettains-dom https://aflink.ru/g/27wmm2ciw316b5da232a4d3555d70bffec514e70/?erid=LatgBTy98
+Redirect 301 /alfastrah-dom https://ad.admitad.com/g/7m3gv369sm16b5da232aaf8a273a0a28311aa27f/
+Redirect 301 /reso-dom https://aflink.ru/g/6jmich24fr16b5da232a42fd5508915759a3f08b/?erid=LatgBvnUH
+
+Redirect 301 /santehnika-tut https://ad.admitad.com/g/nxgdto542616b5da232aeb6db1b093/
+Redirect 301 /santehmoll https://ad.admitad.com/g/dra8qamlvk16b5da232ad22e56a5b7/
+
+Redirect 301 /myrentacar https://ad.admitad.com/g/66o8jzb2p916b5da232a4f47f3b6f3/
+Redirect 301 /discovercarhire https://ad.admitad.com/g/wqjhitsyjq16b5da232a5ea594bb46/
+Redirect 301 /rentalcars https://lnk.do/2i6VaNAC
+Redirect 301 /avtoprokat https://lnk.do/XntcqUS
+Redirect 301 /qeeq https://ad.admitad.com/g/zs1r6fe7nl16b5da232aba3230df6b/
+
+Redirect 301 /incanto https://aflink.ru/g/h5srrm8gb016b5da232a009593b9f2/?erid=LatgC9apm
+Redirect 301 /conteshop https://aflink.ru/g/75p2lkbj6w16b5da232a87de3f87a4/?erid=LatgBXydH
+
+Redirect 301 /unitiki https://ad.admitad.com/g/r3grkojfq916b5da232a5d47c3f2f9/
+Redirect 301 /infobus https://ad.admitad.com/g/pyj4y4uj9q16b5da232a9b8c64f65e/
+
+Redirect 301 /zdravcity https://aflink.ru/g/vhr1ruamas16b5da232aaf67a6436f/?erid=LatgBpn5s
+Redirect 301 /dialog https://aflink.ru/g/n6u4ca5tpw16b5da232a8de46d4bd6/?erid=LatgC8c8W
+Redirect 301 /med-magazin https://aflink.ru/g/ugy39uonpx16b5da232ad83c5f62cc/?erid=LatgBfMv6
+Redirect 301 /apteka-med https://aflink.ru/g/ueue9fvy7u16b5da232a283e9831b7/?erid=LatgC7GS2
+
+Redirect 301 /magicmag https://aflink.ru/g/ufr7d6x9f316b5da232aaf38ea2579/?erid=LatgC1VbL
+Redirect 301 /funburg https://ad.admitad.com/g/oejc34zjjc16b5da232a5c9e9f2cb0/
+
+Redirect 301 /alfastrah-med https://ad.admitad.com/g/7m3gv369sm16b5da232aaf8a273a0a1978e8dae5/
+Redirect 301 /zettains-med https://aflink.ru/g/27wmm2ciw316b5da232a4d3555d70b56ca46d9ea/?erid=LatgBTy98
+Redirect 301 /kaplife-med https://aflink.ru/g/rt4dz7i43c16b5da232ae0d2a432bc4e04b6e0c1/?erid=LatgBvWG6
+Redirect 301 /renhealth-med https://aflink.ru/g/9qw2p1opbr16b5da232ae76cad6e67/?erid=LatgBgjtz
+Redirect 301 /soglasie-med https://aflink.ru/g/i8h0z93nu616b5da232adafaee847b9571b48031/?erid=LatgBpoE5
+
+Redirect 301 /zettains-ipoteka https://ad.admitad.com/g/27wmm2ciw316b5da232a4d3555d70b4d799c6208/
+Redirect 301 /ingos-ipoteka https://ad.admitad.com/g/gd9migpteq16b5da232a68c8c3a654e2eb640481/
+Redirect 301 /absolutins https://ad.admitad.com/g/m7xuhz7ysw16b5da232a440db5965d/?i=10&ulp=https%3A%2F%2Fpolis812.ru%2Fmortgage
+
+Redirect 301 /kassir https://aflink.ru/g/nl62km3au516b5da232a9da2065261/
+Redirect 301 /afisha https://aflink.ru/g/590xgzf9sc16b5da232a7e7188537c/
+
+Redirect 301 /postel-deluxe https://aflink.ru/g/096074f47b16b5da232a1ffe6b23a4/?erid=LatgBcMa7
+Redirect 301 /rastl https://ad.admitad.com/g/hdeczewglg16b5da232aaa847b0d1c/
+
+Redirect 301 /zoopassage https://aflink.ru/g/df2x44hec116b5da232a3eced26db6/
+Redirect 301 /lemurrr https://aflink.ru/g/gg4n8vrtk916b5da232abc513e8629/
+Redirect 301 /petshop https://aflink.ru/g/060984db1616b5da232a1d71d804ca/
+
+Redirect 301 /consul https://ad.admitad.com/g/au98dxsp2m16b5da232acf8b29919d/
+Redirect 301 /bestmebelshop-matras https://ad.admitad.com/g/utmp2mw26216b5da232a7a55b58f14/?i=10&ulp=https%3A%2F%2Fwww.bestmebelshop.ru%2Fcatalog%2Fmatrasy%2F
+
+Redirect 301 /domovenok-spb https://aflink.ru/g/47cq4e4osx16b5da232a8919f973c9/?erid=LatgBjRba&subid=spb
+Redirect 301 /domovenok-moscow https://aflink.ru/g/47cq4e4osx16b5da232a8919f973c9/?erid=LatgBjRba&subid=moscow
+
+Redirect 301 /maknails https://aflink.ru/g/y0myi5pu6w16b5da232a9ef89691c1/?erid=LatgBUwcA
+Redirect 301 /gracy https://aflink.ru/g/qvx8svz7gb16b5da232abf139bb810/
+Redirect 301 /myslitsky https://aflink.ru/g/n84lxqg9pw16b5da232a9b53f9e671/?erid=LatgByVh8
+
+Redirect 301 /kaplife-klesch https://aflink.ru/g/rt4dz7i43c16b5da232ae0d2a432bc7529e28bc8/?erid=LatgBvWG6
+Redirect 301 /zettains-klesch https://aflink.ru/g/27wmm2ciw316b5da232a4d3555d70b45db73606f/?erid=LatgBTy98
+
+Redirect 301 /yourroom-divany https://yourroom.ru/divany
+Redirect 301 /askona-divany https://ad.admitad.com/g/av30r8vbjv16b5da232aa9fe403c97/?i=10&ulp=https%3A%2F%2Fwww.askona.ru%2Fdivany%2F
+
+Redirect 301 /gruzovichkof https://aflink.ru/g/uqju2qah3416b5da232a8292b91ec7/?erid=LatgBVdZL
+
+Redirect 301 /ochkov https://aflink.ru/g/1g2dcvp1p816b5da232ade1da8797c/?erid=LatgBYeb7
+
+Redirect 301 /souzcvettorg https://aflink.ru/g/k2puk5f0x416b5da232aeac27ebda8/?erid=LatgBTcDH
+
+Redirect 301 /lakestone https://aflink.ru/g/qyej4irmro16b5da232a6094969c4d/?erid=LatgBbRzn
+
+Redirect 301 /adminvps https://aflink.ru/g/3s9n4xo7za16b5da232af771e68994/?erid=LatgC1DEL
+Redirect 301 /timeweb https://aflink.ru/g/3w3tocvbxr16b5da232a5fb557f5d8/?erid=LatgC8djE
+Redirect 301 /sweb https://aflink.ru/g/e5wp01terr16b5da232a8efa6ebb65/
+Redirect 301 /fornex https://ad.admitad.com/g/9553369e5916b5da232a24ebb742f6/
+Redirect 301 /sprinthost https://aflink.ru/g/mxmtlx74bh16b5da232ab183dfeeb8/?erid=LatgByErP
+Redirect 301 /fozzy https://ad.admitad.com/g/5zimr14inf16b5da232a14c6d5923b/
+
+Redirect 301 /printbar https://ad.admitad.com/g/cbe11ea04416b5da232a9e13c18ece/
+
+Redirect 301 /nozhikov https://aflink.ru/g/17lxnyyakg16b5da232ac109c80522/?erid=LatgBVak3
+
+Redirect 301 /uslugi-yandex https://ad.admitad.com/g/sxeiw82wt216b5da232a067788f00dd2db63b8ac/
+Redirect 301 /uslugi-yandex-voda https://ad.admitad.com/g/sxeiw82wt216b5da232a067788f00dc721da2e36/
+
+Redirect 301 /akbmag https://aflink.ru/g/sb81v3z8gs16b5da232a81327ae59b/?erid=LatgC9aX4
+Redirect 301 /avtoall-akb https://aflink.ru/g/5rermd1rb516b5da232aaeed5c54e0/?erid=LatgBk8mS&i=10&ulp=https%3A%2F%2Fwww.avtoall.ru%2Fakb%2F
+
+Redirect 301 /ingos-kasko https://aflink.ru/g/gd9migpteq16b5da232a68c8c3a6541471208e40/?erid=LatgBfjJM
+Redirect 301 /renins-kasko https://ad.admitad.com/g/s6tbqbduoz16b5da232a43a0a7def3/
+Redirect 301 /soglasie-kasko https://aflink.ru/g/i8h0z93nu616b5da232adafaee847b1b98b4bdda/?erid=LatgBpoE5
+Redirect 301 /zettains-kasko https://aflink.ru/g/27wmm2ciw316b5da232a4d3555d70b61dac047b5/?erid=LatgBTy98
+Redirect 301 /tinkoffinsurance-kasko https://aflink.ru/g/ydgvieyib416b5da232ada51c9973f0b54b6e4b7/?erid=LatgBfiJv
+Redirect 301 /reso-kasko https://aflink.ru/g/6jmich24fr16b5da232a42fd550891e192d56a4d/?erid=LatgBvnUH
+
+Redirect 301 /alfastrah-onko https://aflink.ru/g/7m3gv369sm16b5da232aaf8a273a0af341300558/
+
+Redirect 301 /shutterstock https://ad.admitad.com/g/y6s8qpp98516b5da232aab3b562e39/
+
+Redirect 301 /nordvpn https://ad.admitad.com/g/mai1uhgx1616b5da232a004ed038cb/
+Redirect 301 /hidemy https://ad.admitad.com/g/nml4qrv3eo16b5da232aa4339b0b6f/
+Redirect 301 /surfshark https://ad.admitad.com/g/8iyyi9n00n16b5da232ac29f5d469c/
+
+Redirect 301 /kruiz-online https://aflink.ru/g/n5wvpwwi5m16b5da232ac29ca9d9f1/?erid=LatgBW21R
+
+Redirect 301 /aromacode https://aflink.ru/g/21lh4ktosv16b5da232a01d1ae9199/
+
+Redirect 301 /hvalwaters https://aflink.ru/g/b0173jl26216b5da232a00dcac28d3/?erid=LatgBYzz5
+
+Redirect 301 /igroved https://aflink.ru/g/u4cldcqma016b5da232aa83e931977/
+
+</IfModule>
+
+# END WordPress
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css                              "access plus 1 month"
+
+  # Data interchange
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+  # Manifest files
+    ExpiresByType application/manifest+json             "access plus 1 year"
+
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+  # Media files
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+  # Web fonts
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+
+  # Other
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>
